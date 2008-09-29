@@ -1,0 +1,6 @@
+%h2
+  Your Pragmatic Cart
+%ul
+  - for item in @cart.items
+    %li
+      = h item.title

@@ -1,0 +1,33 @@
+!!!
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      Pragprog Books Online Store
+    =stylesheet_link_tag 'depot', :media => 'all'
+
+
+  %body#store
+    #banner
+      =image_tag("logo.png")
+      %h1
+        = @page_title || "Pragmatic Bookshelf"
+
+    #content
+      #products-layout
+        #primary-content
+          = yield :layout
+      
+        #secondary-content
+          %ul
+            %li
+              %a{:href => "#"}
+                Home
+            %li
+              %a{:href => "#"}
+                Questions
+            %li
+              %a{:href => "#"}
+                News
+            %li
+              %a{:href => "#"}
+                Contact
